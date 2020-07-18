@@ -60,7 +60,9 @@ public class IntroToRandom {
 		
 		// Using the above example, generate 5 random numbers between -222 and 88
 
-		number = ran.nextInt(88 - -222 + 1);
-		System.out.print(number);
+		for (int i=0; i<5; i++) {
+			number = ran.nextInt(311); 
+			System.out.println(number-222);
+		}
 	}
 }

@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.util.Random;
+
 
 public class DiceRoll {
 
@@ -29,6 +31,7 @@ public class DiceRoll {
 	public static void main(String[] args) {
 		new DiceRoll().run();
 	}
+	Random ran = new Random();
 	
 	public void run() {
 		try {
@@ -48,18 +51,18 @@ public class DiceRoll {
 		rollButton.addActionListener((e) -> {
 
 			// 1. Make randomChoice equal to a random number between 1 and 6
-			int randomChoice = 0;
+			int randomChoice = ran.nextInt(6) + 1;
 
 			// 2. Fix the code below so that it displays the correct image
 			if (randomChoice == 0) {
 				label.setIcon(oneImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 1) {
 				label.setIcon(twoImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 2) {
 				label.setIcon(threeImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 3) {
 				label.setIcon(fourImg);
-			} else if (randomChoice == 0) {
+			} else if (randomChoice == 4) {
 				label.setIcon(fiveImg);
 			} else {
 				label.setIcon(sixImg);

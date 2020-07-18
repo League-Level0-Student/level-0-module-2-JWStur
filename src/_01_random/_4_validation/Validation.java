@@ -12,9 +12,24 @@ public class Validation {
 		
 		Random randomMaker = new Random();
 		
-		int randomNumber = randomMaker.nextInt(5);
+		for (int i=0; i<=10; i++) {
+			
+		int randomChoice = randomMaker.nextInt(5);
 		
-		System.out.println(randomNumber);
+		if (randomChoice == 0) {
+			System.out.println("You did well");
+		} else if (randomChoice == 1) {
+			System.out.println("Great Job!");
+		} else if (randomChoice == 2) {
+			System.out.println("Thank you!");
+		} else if (randomChoice == 3) {
+			System.out.println("YES!");
+		} else if (randomChoice == 4) {
+			System.out.println("Congradulations!");
+		}
+		
+		}
+		
 
 		// 1. Use each value of randomNumber to give the user a random compliment.
 
