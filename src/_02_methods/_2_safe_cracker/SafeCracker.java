@@ -24,10 +24,15 @@ public class SafeCracker {
 		 */
 		
 
+		for (int i=0;i<=10000000;i++) {
+			tryCode(i);
+		}
+		
+		
 	}
 
 	static void tryCode(int guess) {
-		System.out.println("trying " + guess);
+		//System.out.println("trying " + guess);
 
 		int secretCode = 9999999 - wekncrzpasfdkjhcfjse;
 
@@ -48,5 +53,5 @@ public class SafeCracker {
 		}
 	}
 
-	final static int wekncrzpasfdkjhcfjse = new Random().nextInt(100);
+	final static int wekncrzpasfdkjhcfjse = new Random().nextInt(9999999);
 }

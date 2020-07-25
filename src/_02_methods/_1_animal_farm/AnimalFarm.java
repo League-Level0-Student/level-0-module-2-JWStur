@@ -5,6 +5,7 @@ package _02_methods._1_animal_farm;
 
 import java.applet.AudioClip;
 
+
 //Copyright (c) The League of Amazing Programmers 2013-2017
 
 //Level 0
@@ -19,9 +20,39 @@ public class AnimalFarm {
 		/* 1. Ask the user which animal they want, then play the sound of that animal. */			 
 			
 		/* 2. Make it so that the user can keep entering new animals. */
-
+	
+		
+		while (true) {
+			String Animal = JOptionPane.showInputDialog("What animal sound do you want to hear?");
+			
+			if (Animal.equals("Llama")) {
+				playLlama();
+			}
+			else if (Animal.equals("Cat")) {
+				System.out.println("Meow!");
+				playMeow();
+			}
+			else if (Animal.equals("Cow")) {
+				playMoo();
+			}
+			else if (Animal.equals("Duck")) {
+				playQuack();
+			}
+			else if (Animal.equals("Dog")) {
+				playWoof();
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Invalid answer, try again.");
+				
+			}
+			
+			
+		}
+		
+		
+		
 	}
-
+	
 	static void playMoo() {
 		playNoise(mooFile);
 	}
